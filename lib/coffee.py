@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 class Coffee:
+     # Initialize Coffee class with size and price
      def __init__(self, size, price):
         self.size = size
         self.price = price
@@ -8,7 +9,8 @@ class Coffee:
      @property
      def size(self):
         return self._size
-
+     
+     # Validate size property
      @size.setter
      def size(self, value):
         allowed_sizes = ["Small", "Medium", "Large"]
@@ -17,6 +19,7 @@ class Coffee:
         else:
             print("size must be Small, Medium, or Large")
 
+     # Increase price when tipping
      def tip(self):
         print("This coffee is great, here’s a tip!")
         self.price += 1
